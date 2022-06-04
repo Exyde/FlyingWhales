@@ -35,6 +35,45 @@ public class PlayerController : Entity
 
     void HandleMovement()
     {
+
+        // rb.velocity = //
+
+        // //Left & Right Rotation (Barrel Roll)
+        // if (Input.GetKey(KeyCode.Q))
+        // {
+        //     transform.Rotate(Vector3.forward * _torqueForce * Time.deltaTime);
+        // }
+
+        // if (Input.GetKey(KeyCode.D))
+        // {
+        //     transform.Rotate(-Vector3.forward * _torqueForce * Time.deltaTime);
+        // }
+
+        // //Left & Right Drafting (Direction Switch)
+        // if (Input.GetKey(KeyCode.A))
+        // {
+        //     transform.Rotate(-transform.up * _turnForce * Time.deltaTime);
+        // }
+
+        // if (Input.GetKey(KeyCode.E))
+        // {
+        //     transform.Rotate(transform.up * _turnForce * Time.deltaTime);
+        // }
+
+        // //Down & Up Rotation (Plane Joystick)
+        // if (Input.GetKey(KeyCode.Z))
+        // {
+        //     transform.Rotate(Vector3.right * _torqueForce * Time.deltaTime);
+        // }
+
+        // if (Input.GetKey(KeyCode.S))
+        // {
+        //     transform.Rotate(-Vector3.right * _torqueForce * Time.deltaTime);
+        // }
+    }
+
+     void HandleMovementLegacy()
+    {
         //Left & Right Rotation (Barrel Roll)
         if (Input.GetKey(KeyCode.Q))
         {
@@ -68,6 +107,7 @@ public class PlayerController : Entity
             transform.Rotate(-Vector3.right * _torqueForce * Time.deltaTime);
         }
     }
+
 
     public void HandleMoveInputs(Vector2 inputs) => _inputs = new Vector3(inputs.x, inputs.y, 0);
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class JaugeSystem : MonoBehaviour
 {
 
-    //Valeur à retrancher periodiquement
+    //Valeur ï¿½ retrancher periodiquement
 
     [Header("VALEUR PERIODIQUE")]
 
@@ -17,7 +17,7 @@ public class JaugeSystem : MonoBehaviour
 
     public int Pollution;
 
-    //Valeur à retrancher sur evenement
+    //Valeur ï¿½ retrancher sur evenement
 
     [Header("VALEUR SUR TRIGGER")]
 
@@ -37,7 +37,7 @@ public class JaugeSystem : MonoBehaviour
 
     int JaugePollution = 0;
 
-    //Booléen Etat du Jeu
+    //Boolï¿½en Etat du Jeu
 
     bool ALaSurface;
 
@@ -99,7 +99,7 @@ public class JaugeSystem : MonoBehaviour
 
         if (JaugeRespiration <= 0 || JaugeNourriture <= 0)
         {
-            Debug.Log("Game Over");
+            GameManager._instance.EndGame();
         }
 
     }

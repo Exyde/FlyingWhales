@@ -221,7 +221,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &861574048
+--- !u!1 &848944063
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -229,77 +229,70 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 861574051}
-  - component: {fileID: 861574050}
-  - component: {fileID: 861574049}
+  - component: {fileID: 848944066}
+  - component: {fileID: 848944065}
+  - component: {fileID: 848944064}
   m_Layer: 0
-  m_Name: PF_ChunkSpawner (2)
+  m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &861574049
-MonoBehaviour:
+--- !u!154 &848944064
+TerrainCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861574048}
+  m_GameObject: {fileID: 848944063}
+  m_Material: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe356209f5385cb4e9206701c3de73b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _timerName: Spawn Chunk
-  _timerDuration: 1
-  _timeElapsed: 0
-  _isLoopTimer: 0
-  _shouldTimerRun: 1
-  _event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 861574050}
-        m_TargetAssemblyTypeName: ChunkSpawner, Assembly-CSharp
-        m_MethodName: SpawnNewChunk
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &861574050
-MonoBehaviour:
+  m_TerrainData: {fileID: 15600000, guid: 79bd7d99bd7dc854a90fe843b99e3261, type: 2}
+  m_EnableTreeColliders: 1
+--- !u!218 &848944065
+Terrain:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861574048}
+  m_GameObject: {fileID: 848944063}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3df508d9019179f4abf0fefb2774a8d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _fishPrefab: {fileID: 7900265971213789196, guid: 8f8caf5951da3d64ebadea45af2bd9b1, type: 3}
-  _garbagePrefab: {fileID: 8583321143029228437, guid: e6d1cb70f2c752240bee07f8f52459bb, type: 3}
-  _garbagePercentagePerChunk: 24.7
-  _numberOfEntityPerChunk: 50
-  _sphereSpawnRadius: 9
-  _debug: 1
-  _debugColor: {r: 0.8113208, g: 0.36356357, b: 0.36356357, a: 1}
-  _clearTransformOnSpawn: 0
---- !u!4 &861574051
+  serializedVersion: 6
+  m_TerrainData: {fileID: 15600000, guid: 79bd7d99bd7dc854a90fe843b99e3261, type: 2}
+  m_TreeDistance: 5000
+  m_TreeBillboardDistance: 50
+  m_TreeCrossFadeLength: 5
+  m_TreeMaximumFullLODCount: 50
+  m_DetailObjectDistance: 80
+  m_DetailObjectDensity: 1
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
+  m_HeightmapMaximumLOD: 0
+  m_ShadowCastingMode: 2
+  m_DrawHeightmap: 1
+  m_DrawInstanced: 0
+  m_DrawTreesAndFoliage: 1
+  m_StaticShadowCaster: 0
+  m_ReflectionProbeUsage: 1
+  m_MaterialTemplate: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
+  m_BakeLightProbesForTrees: 1
+  m_PreserveTreePrototypeLayers: 0
+  m_DeringLightProbesForTrees: 1
+  m_ScaleInLightmap: 0.0256
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_GroupingID: 0
+  m_RenderingLayerMask: 1
+  m_AllowAutoConnect: 1
+--- !u!4 &848944066
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861574048}
+  m_GameObject: {fileID: 848944063}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 22.1, z: -56.4}
+  m_LocalPosition: {x: -139.75, y: -73.25, z: -111.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -437,258 +430,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!1 &1016649306
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1016649309}
-  - component: {fileID: 1016649308}
-  - component: {fileID: 1016649307}
-  m_Layer: 0
-  m_Name: PF_ChunkSpawner (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1016649307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016649306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe356209f5385cb4e9206701c3de73b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _timerName: Spawn Chunk
-  _timerDuration: 1
-  _timeElapsed: 0
-  _isLoopTimer: 0
-  _shouldTimerRun: 1
-  _event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1016649308}
-        m_TargetAssemblyTypeName: ChunkSpawner, Assembly-CSharp
-        m_MethodName: SpawnNewChunk
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1016649308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016649306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3df508d9019179f4abf0fefb2774a8d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _fishPrefab: {fileID: 7900265971213789196, guid: 8f8caf5951da3d64ebadea45af2bd9b1, type: 3}
-  _garbagePrefab: {fileID: 8583321143029228437, guid: e6d1cb70f2c752240bee07f8f52459bb, type: 3}
-  _garbagePercentagePerChunk: 24.7
-  _numberOfEntityPerChunk: 200
-  _sphereSpawnRadius: 5
-  _debug: 1
-  _debugColor: {r: 0.8113208, g: 0.36356357, b: 0.36356357, a: 1}
-  _clearTransformOnSpawn: 0
---- !u!4 &1016649309
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016649306}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -36.1, y: 22.1, z: -56.4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1158223009
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1158223012}
-  - component: {fileID: 1158223011}
-  - component: {fileID: 1158223010}
-  m_Layer: 0
-  m_Name: PF_ChunkSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1158223010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158223009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe356209f5385cb4e9206701c3de73b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _timerName: Spawn Chunk
-  _timerDuration: 1
-  _timeElapsed: 0
-  _isLoopTimer: 0
-  _shouldTimerRun: 1
-  _event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1158223011}
-        m_TargetAssemblyTypeName: ChunkSpawner, Assembly-CSharp
-        m_MethodName: SpawnNewChunk
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1158223011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158223009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3df508d9019179f4abf0fefb2774a8d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _fishPrefab: {fileID: 7900265971213789196, guid: 8f8caf5951da3d64ebadea45af2bd9b1, type: 3}
-  _garbagePrefab: {fileID: 8583321143029228437, guid: e6d1cb70f2c752240bee07f8f52459bb, type: 3}
-  _garbagePercentagePerChunk: 58
-  _numberOfEntityPerChunk: 100
-  _sphereSpawnRadius: 10
-  _debug: 1
-  _debugColor: {r: 0.8113208, g: 0.36356357, b: 0.36356357, a: 1}
-  _clearTransformOnSpawn: 0
---- !u!4 &1158223012
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158223009}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1653242510
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1653242513}
-  - component: {fileID: 1653242512}
-  - component: {fileID: 1653242511}
-  m_Layer: 0
-  m_Name: PF_ChunkSpawner (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1653242511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653242510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe356209f5385cb4e9206701c3de73b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _timerName: Spawn Chunk
-  _timerDuration: 1
-  _timeElapsed: 0
-  _isLoopTimer: 0
-  _shouldTimerRun: 1
-  _event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1653242512}
-        m_TargetAssemblyTypeName: ChunkSpawner, Assembly-CSharp
-        m_MethodName: SpawnNewChunk
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1653242512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653242510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3df508d9019179f4abf0fefb2774a8d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _fishPrefab: {fileID: 7900265971213789196, guid: 8f8caf5951da3d64ebadea45af2bd9b1, type: 3}
-  _garbagePrefab: {fileID: 8583321143029228437, guid: e6d1cb70f2c752240bee07f8f52459bb, type: 3}
-  _garbagePercentagePerChunk: 24.7
-  _numberOfEntityPerChunk: 50
-  _sphereSpawnRadius: 1
-  _debug: 1
-  _debugColor: {r: 0.8113208, g: 0.36356357, b: 0.36356357, a: 1}
-  _clearTransformOnSpawn: 0
---- !u!4 &1653242513
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653242510}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -56.4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1951958639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -752,9 +493,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3b84d12a71c802140a333035bb4f7ee9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8759ec410a6774b4ea13ae32dc2b8d2e, type: 2}
     - target: {fileID: 919132149155446097, guid: 3b84d12a71c802140a333035bb4f7ee9, type: 3}
       propertyPath: m_Name
       value: Cube_NormalInside
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b84d12a71c802140a333035bb4f7ee9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b84d12a71c802140a333035bb4f7ee9, type: 3}
@@ -820,11 +569,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 660008101798273882, guid: cd7888eb6ab811d4f8df31f221babb60, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -4.28
       objectReference: {fileID: 0}
     - target: {fileID: 660008101798273882, guid: cd7888eb6ab811d4f8df31f221babb60, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -238
       objectReference: {fileID: 0}
     - target: {fileID: 660008101798273882, guid: cd7888eb6ab811d4f8df31f221babb60, type: 3}
       propertyPath: m_LocalRotation.w
@@ -860,10 +609,67 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 660008101798273886, guid: cd7888eb6ab811d4f8df31f221babb60, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd7888eb6ab811d4f8df31f221babb60, type: 3}
+--- !u!1001 &2415214724814077463
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3434894728924426328, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
+      propertyPath: m_Name
+      value: PF_WaterSurfaceShader
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637172542351757726, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637172542351757726, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637172542351757726, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637172542351757726, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637172542351757726, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637172542351757726, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637172542351757726, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637172542351757726, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637172542351757726, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637172542351757726, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637172542351757726, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
 --- !u!1001 &5894613537649895081
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -921,3 +727,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b70d77409c4c8545993b102b558f7b0, type: 3}
+--- !u!1001 &8075973821164912968
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8075973820141966825, guid: 2eff21d154bf0bb4b9ba995db5b20fcf, type: 3}
+      propertyPath: m_Name
+      value: PF_ChunkSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075973820141966828, guid: 2eff21d154bf0bb4b9ba995db5b20fcf, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075973820141966828, guid: 2eff21d154bf0bb4b9ba995db5b20fcf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075973820141966828, guid: 2eff21d154bf0bb4b9ba995db5b20fcf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075973820141966828, guid: 2eff21d154bf0bb4b9ba995db5b20fcf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075973820141966828, guid: 2eff21d154bf0bb4b9ba995db5b20fcf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075973820141966828, guid: 2eff21d154bf0bb4b9ba995db5b20fcf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075973820141966828, guid: 2eff21d154bf0bb4b9ba995db5b20fcf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075973820141966828, guid: 2eff21d154bf0bb4b9ba995db5b20fcf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075973820141966828, guid: 2eff21d154bf0bb4b9ba995db5b20fcf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075973820141966828, guid: 2eff21d154bf0bb4b9ba995db5b20fcf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075973820141966828, guid: 2eff21d154bf0bb4b9ba995db5b20fcf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2eff21d154bf0bb4b9ba995db5b20fcf, type: 3}

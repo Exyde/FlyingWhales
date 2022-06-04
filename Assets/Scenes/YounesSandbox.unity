@@ -431,6 +431,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7865798111626371385, guid: cd7888eb6ab811d4f8df31f221babb60, type: 3}
+      propertyPath: m_boostSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7865798111626371385, guid: cd7888eb6ab811d4f8df31f221babb60, type: 3}
+      propertyPath: m_constantSpeed
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd7888eb6ab811d4f8df31f221babb60, type: 3}
 --- !u!1001 &1257754601174850669
@@ -632,7 +640,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 98101b7aca4506d4696f28e1fe0ac598, type: 2}
     - target: {fileID: 4437793222377944016, guid: 1b675e4e2430d0445855699372b4e527, type: 3}
       propertyPath: m_Name
-      value: Pf_Terrain
+      value: PF_Terrain
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b675e4e2430d0445855699372b4e527, type: 3}

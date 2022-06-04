@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class JaugeSystem : MonoBehaviour
 {
-
     //Valeur � retrancher periodiquement
 
     [Header("VALEUR PERIODIQUE")]

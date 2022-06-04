@@ -290,6 +290,7 @@ MonoBehaviour:
   _sphereSpawnRadius: 9
   _debug: 1
   _debugColor: {r: 0.8113208, g: 0.36356357, b: 0.36356357, a: 1}
+  _clearTransformOnSpawn: 0
 --- !u!4 &861574051
 Transform:
   m_ObjectHideFlags: 0
@@ -501,10 +502,11 @@ MonoBehaviour:
   _fishPrefab: {fileID: 7900265971213789196, guid: 8f8caf5951da3d64ebadea45af2bd9b1, type: 3}
   _garbagePrefab: {fileID: 8583321143029228437, guid: e6d1cb70f2c752240bee07f8f52459bb, type: 3}
   _garbagePercentagePerChunk: 24.7
-  _numberOfEntityPerChunk: 50
+  _numberOfEntityPerChunk: 200
   _sphereSpawnRadius: 5
   _debug: 1
   _debugColor: {r: 0.8113208, g: 0.36356357, b: 0.36356357, a: 1}
+  _clearTransformOnSpawn: 0
 --- !u!4 &1016649309
 Transform:
   m_ObjectHideFlags: 0
@@ -583,11 +585,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fishPrefab: {fileID: 7900265971213789196, guid: 8f8caf5951da3d64ebadea45af2bd9b1, type: 3}
   _garbagePrefab: {fileID: 8583321143029228437, guid: e6d1cb70f2c752240bee07f8f52459bb, type: 3}
-  _garbagePercentagePerChunk: 24.7
-  _numberOfEntityPerChunk: 50
-  _sphereSpawnRadius: 5
+  _garbagePercentagePerChunk: 58
+  _numberOfEntityPerChunk: 100
+  _sphereSpawnRadius: 10
   _debug: 1
   _debugColor: {r: 0.8113208, g: 0.36356357, b: 0.36356357, a: 1}
+  _clearTransformOnSpawn: 0
 --- !u!4 &1158223012
 Transform:
   m_ObjectHideFlags: 0
@@ -671,6 +674,7 @@ MonoBehaviour:
   _sphereSpawnRadius: 1
   _debug: 1
   _debugColor: {r: 0.8113208, g: 0.36356357, b: 0.36356357, a: 1}
+  _clearTransformOnSpawn: 0
 --- !u!4 &1653242513
 Transform:
   m_ObjectHideFlags: 0

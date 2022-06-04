@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 660008101798273829}
   - component: {fileID: 660008101798273828}
   - component: {fileID: 660008101798273831}
+  - component: {fileID: 7197945609289284459}
   m_Layer: 0
   m_Name: PF_Player
   m_TagString: Untagged
@@ -195,6 +196,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01b3a9161d3eb0241bd4d56fe9425461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Faim: 10
+  Apnee: 20
+  Respiration: 200
+  Pollution: 2
+  PoissonImpactNourriture: 5
+  DechetImpactNourriture: 3
+  DechetImpactRespiration: 10
+  DechetImpactPollution: 2
+--- !u!114 &7197945609289284459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660008101798273886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe356209f5385cb4e9206701c3de73b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timerName: GestionJaugePeriodique
+  _timerDuration: 1
+  _timeElapsed: 0
+  _isLoopTimer: 1
+  _shouldTimerRun: 1
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 660008101798273831}
+        m_TargetAssemblyTypeName: JaugeSystem, Assembly-CSharp
+        m_MethodName: ActualisationJauge
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &660008102170305418
 GameObject:
   m_ObjectHideFlags: 0

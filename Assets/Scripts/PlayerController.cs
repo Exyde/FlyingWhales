@@ -9,8 +9,14 @@ public class PlayerController : Entity
 
 
     [Header("Speeds")]
+    [Range(0, 200)] public float _forwardForce = 6f;
+    [Range(0, 200)] public float _moveForce = 6f;
+
+
+    [Range (0, 200)] public float _minSpeed;
+    [Range (0, 200)] public float _maxSpeed;
+
     [Range(0, 100)] public float _dashForce = 6f;
-    [Range(0, 20)] public float _moveForce = 6f;
     [Range(20, 100)] public float _torqueForce = 6f;
     [Range(20, 100)] public float _turnForce = 6f;
 
@@ -28,15 +34,24 @@ public class PlayerController : Entity
     }
 
     void Move() {
-        rb.velocity = transform.forward * _moveForce;
+        
         // HandleDash();
+
+        // rb.velocity = transform.forward * _forwardForce;
         HandleMovement();
+
+
+        rb.AddForce(transform.forward * _forwardForce * Time.deltaTime);
+        float maxVelZ = Mathf.Clamp (rb.velocity.z, _minSpeed, _maxSpeed);
+        rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, maxVelZ);
+
     }
 
     void HandleMovement()
     {
 
-        // rb.velocity = //
+        rb.AddForce(_inputs * Time.deltaTime * _moveForce);
+        Debug.Log(rb.velocity);
 
         // //Left & Right Rotation (Barrel Roll)
         // if (Input.GetKey(KeyCode.Q))

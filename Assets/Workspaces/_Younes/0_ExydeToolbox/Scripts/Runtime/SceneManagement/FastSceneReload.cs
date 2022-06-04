@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-// using UnityEngine.InputSystem;
+using UnityEngine.InputSystem;
 
 namespace ExydeToolbox{
     public class FastSceneReload : MonoBehaviour{
@@ -17,9 +17,9 @@ namespace ExydeToolbox{
 
         void Update(){
 
-            // if ( _inputMode == InputMode.New ){
-            //     if (Keyboard.current.rKey.wasPressedThisFrame) Reload();
-            // }
+            if ( _inputMode == InputMode.New ){
+                if (Keyboard.current.rKey.wasPressedThisFrame) Reload();
+            }
 
             if ( _inputMode == InputMode.Legacy ){
                 if (Input.GetKeyDown (reloadKey)) Reload();

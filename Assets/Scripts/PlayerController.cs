@@ -49,9 +49,7 @@ public class PlayerController : Entity
 
     void HandleMovement()
     {
-
         rb.AddForce(_inputs * Time.deltaTime * _moveForce);
-        Debug.Log(rb.velocity);
 
         // //Left & Right Rotation (Barrel Roll)
         // if (Input.GetKey(KeyCode.Q))

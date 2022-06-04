@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 410661020}
   - component: {fileID: 410661019}
   - component: {fileID: 410661018}
-  - component: {fileID: 410661017}
+  - component: {fileID: 7180889372679842449}
   m_Layer: 0
   m_Name: Rock11
   m_TagString: Untagged
@@ -52,9 +52,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -66,6 +69,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -78,8 +82,9 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &410661017
-MeshCollider:
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7180889372679842449
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88,7 +93,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300002, guid: f5eb667268ae2ed40a94e47752030ce5, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.8264623, y: 2.4938023, z: 1.7530584}
+  m_Center: {x: 0.029083759, y: 1.0972761, z: 0.17775741}

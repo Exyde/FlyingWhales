@@ -33,11 +33,11 @@ public class JaugeSystem : MonoBehaviour
     //Jauge
 
     [Header ("Jauge Debug - Read Only")]
-    [SerializeField] int JaugeNourriture = 800;
+    public int JaugeNourriture = 800;
 
-    [SerializeField]  int JaugeRespiration = 1000;
+    public int JaugeRespiration = 1000;
 
-    int JaugePollution = 0;
+    public int JaugePollution = 0;
 
     //Bool�en Etat du Jeu
 
@@ -96,7 +96,7 @@ public class JaugeSystem : MonoBehaviour
 
         //POLLUTION
 
-        JaugePollution -= Pollution;
+        JaugePollution += Pollution;
 
         //CLAMPING TIME
 

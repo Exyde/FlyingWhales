@@ -1,6 +1,6 @@
 Shader "Hidden/ColorModif"
 {
-	// les propriétés du shader modifiables dans le material et dans le code
+	// les proprietes du shader modifiables dans le material et dans le code
 	Properties
 	{
 		brightness("brightness", Range(-1.0, 1.0)) = 0
@@ -14,7 +14,7 @@ Shader "Hidden/ColorModif"
 		// No culling or depth
 		Cull Off ZWrite Off ZTest Always
 
-		// récupère la texture de l'écran et l'enregistre dans la variable _ScreenTexture
+		// recupere la texture de l'ecran et l'enregistre dans la variable _ScreenTexture
 		GrabPass{
 		"_ScreenTexture"
 		}
@@ -26,7 +26,7 @@ Shader "Hidden/ColorModif"
 			#pragma fragment frag
 			#include "UnityCG.cginc"
 
-			// récupérer les variables modifiables et la texture d l'écran
+			// recuperer les variables modifiables et la texture d l'ecran
 			uniform float brightness;
 			uniform float contrast;
 			uniform float saturation;
@@ -41,11 +41,11 @@ Shader "Hidden/ColorModif"
 
             struct v2f
             {
-                float2 grabPos : TEXCOORD0;		//à la place de uv
-                float4 pos : SV_POSITION;		// à la place de vertex
+                float2 grabPos : TEXCOORD0;		// la place de uv
+                float4 pos : SV_POSITION;		//  la place de vertex
             };
 
-			// réucpère la position du pixel à l'éran ?? et l'envoie à la fonction frag
+			// reucpere la position du pixel a l'eran ?? et l'envoie e la fonction frag
             v2f vert (appdata v)
             {
                 v2f o;
@@ -89,18 +89,18 @@ Shader "Hidden/ColorModif"
 			}
 
 
-			// détermine la couleur du pixel
+			// dï¿½termine la couleur du pixel
             fixed4 frag (v2f i) : SV_Target
             {
-				//récupère la couleur du pixel à partir de la position envoyée par la fonction vert et de la texture du grabPass
+				//rï¿½cupï¿½re la couleur du pixel ï¿½ partir de la position envoyï¿½e par la fonction vert et de la texture du grabPass
 				fixed4 col = tex2D(_ScreenTexture, i.grabPos);
 				
-				// luminosité	
+				// luminositï¿½	
 				col = mul(col, brightnessMatrix(brightness));
 				
 				// contraste version simple
 				col.rgb = lerp(float3(0.5, 0.5, 0.5), col.rgb, contrast);
-				// contraste version compliquée qui marche mieux dans godot mais ici j'ai l'impression que ça change rien 
+				// contraste version compliquï¿½e qui marche mieux dans godot mais ici j'ai l'impression que ï¿½a change rien 
 				//col = mul(col, contrastMatrix(contrast));
 				
 				// saturation
@@ -109,7 +109,6 @@ Shader "Hidden/ColorModif"
 				// teinte
 				col.rgb = applyHue(col.rgb, hueModif);
 				
-				// renvoie le résultat 
                 return col;
             }
             ENDCG

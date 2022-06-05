@@ -50,6 +50,8 @@ public class JaugeSystem : MonoBehaviour
     [SerializeField] Image _imgOxygeneJauge;
     [SerializeField] Image _imgEatingJauge;
 
+    [Header ("Skybox")]
+
 
     void MangerPoisson()
     {

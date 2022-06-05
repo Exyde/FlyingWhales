@@ -226,6 +226,18 @@ MonoBehaviour:
   TimeRotationAtSurface: 1.25
   MaxHeight: 60.25
   MinHeight: -400
+  _splashesClips:
+  - {fileID: 8300000, guid: 78c44eb510758ab41986f6c0ffe7a987, type: 3}
+  - {fileID: 8300000, guid: 5b758da8d03f4e04f934259df2e6f863, type: 3}
+  - {fileID: 8300000, guid: f301bb960e434294697df0077668d5b0, type: 3}
+  - {fileID: 8300000, guid: 5fd9781807782434cbd6cdc7014f7a03, type: 3}
+  - {fileID: 8300000, guid: ff825d4a8affe9246965cda2c6a5fa54, type: 3}
+  _dashClips:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &6376822851074796543
 GameObject:
   m_ObjectHideFlags: 0

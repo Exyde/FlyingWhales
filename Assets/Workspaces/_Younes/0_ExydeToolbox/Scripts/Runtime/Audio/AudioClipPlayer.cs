@@ -11,4 +11,9 @@ public static class AudioClipPlayer{
         ad.Play();
         MonoBehaviour.Destroy(go, clip.length);
     }
+
+    public static void PlaySoundRandomFromArray(AudioClip[] clips, float volume = 1.0f){
+        AudioClip clip = clips[Random.Range(0, clips.Length)];
+        PlaySound(clip, volume);
+    }
 }

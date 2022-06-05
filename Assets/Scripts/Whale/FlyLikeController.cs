@@ -34,6 +34,11 @@ public class FlyLikeController : MonoBehaviour
     [SerializeField] float MaxHeight;
     [SerializeField] float MinHeight;
 
+    [Header ("Audio")]
+    [SerializeField] AudioClip[] _splashesClips;
+    [SerializeField] AudioClip[] _dashClips;
+
+
     private void Awake()
     {
         speed = m_constantSpeed;
@@ -53,7 +58,6 @@ public class FlyLikeController : MonoBehaviour
     {
         boosting = true;
         speed = m_boostSpeed;
-
         yield return new WaitForSeconds(m_boostDuration);
 
         endBoostTime = m_endBoostDuration;
@@ -114,13 +118,20 @@ public class FlyLikeController : MonoBehaviour
         transform.eulerAngles = new Vector3 (transform.eulerAngles.x, transform.eulerAngles.y, 0);
     }
 
-    
 
     public void ResetRotation()
     {
         ShouldTurn = true;
         InitialRotation = transform.eulerAngles.x;
         InitialTime = Time.time;
+
+        StartCoroutine(PlaySoundDelayed( TimeRotationAtSurface / 2.0f));
+    }
+
+    IEnumerator PlaySoundDelayed(float delay){
+        yield return new WaitForSeconds(delay);
+        AudioClipPlayer.PlaySoundRandomFromArray(_splashesClips);
+        yield return null;
     }
 
 }

@@ -375,7 +375,7 @@ MonoBehaviour:
   m_cameraOffset: {x: 0, y: 4, z: -9}
   m_offsetSpeedX: 1
   m_offsetSpeedY: 1
-  m_offsetSpeedZ: 1
+  m_offsetSpeedZ: 3
 --- !u!114 &1572395482
 MonoBehaviour:
   m_ObjectHideFlags: 0

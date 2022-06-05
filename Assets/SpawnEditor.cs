@@ -8,6 +8,8 @@ public class SpawnEditor : MonoBehaviour
 
     public List<Vector3> ListePositionChunk;
 
+    int RandomN;
+
     [SerializeField] GameObject PrefabSpawn;
 
     private void Start()
@@ -19,6 +21,17 @@ public class SpawnEditor : MonoBehaviour
             ListSpawn.Add(Instantiate(PrefabSpawn, ListePositionChunk[i],transform.rotation, transform));
         }
         
+    }
+
+    public void RandomGeneration()
+    {
+        RandomN = Random.Range(0, ListSpawn.Count);
+
+        ListSpawn[RandomN].GetComponent<ChunkSpawner>().ClearTransform();
+        ListSpawn[RandomN].GetComponent<ChunkSpawner>().SpawnNewChunk();
+
+        Debug.Log("LoL");
+
     }
 
 

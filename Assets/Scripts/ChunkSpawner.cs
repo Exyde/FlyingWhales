@@ -55,7 +55,7 @@ public class ChunkSpawner : MonoBehaviour
         return Instantiate(entity, transform.position + pos, Quaternion.identity);
     }
 
-    private void ClearTransform(){
+    public void ClearTransform(){
         for (int i = 0; i < transform.childCount; i++){
             Destroy(transform.GetChild(0).gameObject);
         }

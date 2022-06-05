@@ -108,25 +108,15 @@ public class JaugeSystem : MonoBehaviour
         if (other.tag == "Garbage")
         {
             MangerDechet();
+            Destroy(other);
         }
 
         if (other.tag == "Fish")
         {
             MangerPoisson();
+            Destroy(other);
         }
 
-        if (other.tag == "Surface")
-        {
-            ALaSurface = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Surface")
-        {
-            ALaSurface = false;
-        }
     }
 
 }

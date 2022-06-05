@@ -16,11 +16,19 @@ public class MovementWhale : MonoBehaviour
 
     private void FixedUpdate()
     {
-        LerpRotation = Mathf.InverseLerp(InitialTime, InitialRotation + TimeRotationAtSurface, Time.time);
+        
 
         if (ShouldTurn)
         {
+
+            LerpRotation = Mathf.InverseLerp(InitialTime, InitialRotation + TimeRotationAtSurface, Time.time);
+
             Mathf.LerpAngle(InitialRotation, -10, LerpRotation);
+
+            if(Time.time >= InitialRotation + TimeRotationAtSurface)
+            {
+                ShouldTurn = false;
+            }
 
         }
 

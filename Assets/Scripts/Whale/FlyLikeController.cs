@@ -87,8 +87,9 @@ public class FlyLikeController : MonoBehaviour
         float fixedDeltaTime = Time.fixedDeltaTime;
 
         //LIGNE DEGUEU
-        if (transform.position.y >= 59 && !ShouldTurn)
+        if (transform.position.y >= 59.5 && !ShouldTurn)
         {
+            
             ResetRotation();
         }
         //LIGNE DEGUEU fin
@@ -129,6 +130,7 @@ public class FlyLikeController : MonoBehaviour
     }
 
     IEnumerator PlaySoundDelayed(float delay){
+        
         yield return new WaitForSeconds(delay);
         AudioClipPlayer.PlaySoundRandomFromArray(_splashesClips);
         yield return null;

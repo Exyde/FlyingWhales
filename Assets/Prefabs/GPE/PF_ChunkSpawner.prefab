@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8075973820141966828}
   - component: {fileID: 8075973820141966827}
-  - component: {fileID: 8075973820141966826}
   - component: {fileID: 823514519061611196}
   m_Layer: 0
   m_Name: PF_ChunkSpawner
@@ -66,38 +65,7 @@ MonoBehaviour:
   _debug: 1
   _debugColor: {r: 0.8113208, g: 0.36356357, b: 0.36356357, a: 1}
   _clearTransformOnSpawn: 1
---- !u!114 &8075973820141966826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8075973820141966825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe356209f5385cb4e9206701c3de73b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _timerName: Spawn Chunk
-  _timerDuration: 1
-  _timeElapsed: 0
-  _isLoopTimer: 0
-  _shouldTimerRun: 1
-  _event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8075973820141966827}
-        m_TargetAssemblyTypeName: ChunkSpawner, Assembly-CSharp
-        m_MethodName: SpawnNewChunk
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  Player: {fileID: 0}
 --- !u!114 &823514519061611196
 MonoBehaviour:
   m_ObjectHideFlags: 0

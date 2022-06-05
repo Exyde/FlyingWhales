@@ -15,14 +15,27 @@ public class ChunkSpawner : MonoBehaviour
     [SerializeField] bool _debug;
     [SerializeField] Color _debugColor;
     [SerializeField] bool _clearTransformOnSpawn;
- 
+
+    [SerializeField] GameObject Player;
+
     TimerEvent _timerEvent;
 
+    int JaugePollution;
+
+    private void Start()
+    {
+        Player = GameObject.Find("PF_Player");
+            
+    }
     private enum EntityType{
         Garbagae, Fish
     }
 
     public void SpawnNewChunk(){
+
+        JaugePollution = Player.GetComponent<JaugeSystem>().JaugePollution;
+        _garbagePercentagePerChunk = Random.Range(Mathf.Sqrt(4.5f * JaugePollution), 20 + Mathf.Sqrt(6.3f * JaugePollution));
+
         if (_clearTransformOnSpawn) ClearTransform();
         // Debug.Log("Spawning Chunks");
         for (int i = 0; i < _numberOfEntityPerChunk; i++){

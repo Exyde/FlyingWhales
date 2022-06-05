@@ -472,5 +472,25 @@ PrefabInstance:
       propertyPath: _gameScene
       value: Game
       objectReference: {fileID: 0}
+    - target: {fileID: 7850167955052094373, guid: 3783d25a295262c46b500fa66d70feb9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 853.9185
+      objectReference: {fileID: 0}
+    - target: {fileID: 7850167955052094373, guid: 3783d25a295262c46b500fa66d70feb9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 240.7962
+      objectReference: {fileID: 0}
+    - target: {fileID: 7850167955052094373, guid: 3783d25a295262c46b500fa66d70feb9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -448
+      objectReference: {fileID: 0}
+    - target: {fileID: 7850167955052094373, guid: 3783d25a295262c46b500fa66d70feb9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 317
+      objectReference: {fileID: 0}
+    - target: {fileID: 7850167955337515359, guid: 3783d25a295262c46b500fa66d70feb9, type: 3}
+      propertyPath: m_Text
+      value: Play Vacuum Balaena
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3783d25a295262c46b500fa66d70feb9, type: 3}

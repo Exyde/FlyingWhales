@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     }
     public void EndGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(2);
     }
     #endregion
 

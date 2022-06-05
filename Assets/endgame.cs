@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class endgame : MonoBehaviour
 {
+    public string _menuScene = "MenuPrincipal";
+
 
     public Text texte1;
     public Text texte2;
@@ -14,67 +18,98 @@ public class endgame : MonoBehaviour
     public Button quitter;
     IEnumerator AfficherTextes()
     {
-        texte1.CrossFadeAlpha(1f, 1f, false);
-        yield return new WaitForSeconds(0.75f);
-        texte2.CrossFadeAlpha(1f, 1f, false);
-        yield return new WaitForSeconds(0.75f);
-        texte3.CrossFadeAlpha(1f, 1f, false);
-        yield return new WaitForSeconds(0.75f);
-        texte4.CrossFadeAlpha(1f, 1f, false);
-        yield return new WaitForSeconds(0.75f);
+        // texte1.CrossFadeAlpha(1f, 1f, false);
+        // yield return new WaitForSeconds(0.75f);
+        // texte2.CrossFadeAlpha(1f, 1f, false);
+        // yield return new WaitForSeconds(0.75f);
+        // texte3.CrossFadeAlpha(1f, 1f, false);
+        // yield return new WaitForSeconds(0.75f);
+        // texte4.CrossFadeAlpha(1f, 1f, false);
+        // yield return new WaitForSeconds(0.75f);
 
-        texte1.CrossFadeAlpha(0f, 1f, false);
-        texte2.CrossFadeAlpha(0f, 1f, false);
-        texte3.CrossFadeAlpha(0f, 1f, false);
-        texte4.CrossFadeAlpha(0f, 1f, false);
-        yield return new WaitForSeconds(1.5f);
+        // texte1.CrossFadeAlpha(0f, 1f, false);
+        // texte2.CrossFadeAlpha(0f, 1f, false);
+        // texte3.CrossFadeAlpha(0f, 1f, false);
+        // texte4.CrossFadeAlpha(0f, 1f, false);
+        // yield return new WaitForSeconds(1.5f);
 
-        texte1.text = "Pourtant, les baleines apportent de formidables services écosystémiques. Véritables ingénieures des océans, elles séquestrent le carbonne dans le fond des océans et assurent ainsi la pérénité de la vie sauvage marine.";
-        texte1.CrossFadeAlpha(1f, 1f, false);
-        yield return new WaitForSeconds(0.75f);
-        texte2.text = "Les protéger et assurer la croissance de leurs population devrait être adopté partout comme un élément d'une gestion carbonne responsable. Des propositions concrètes sont proposée par le programmes NUPES :";
-        texte2.CrossFadeAlpha(1f, 1f, false);
-        yield return new WaitForSeconds(0.75f);
-        texte3.CrossFadeAlpha(1f, 1f, false);
-        texte3.text = "Classer plus de 30% du territoire maritime français en aire maritime protégée, dont 10% en protection forte, pour en faire de véritables sanctuaires.";
-        yield return new WaitForSeconds(0.75f);
-        yield return new WaitForSeconds(0.75f);
-        texte4.text = "Gérer durablement la ressource via la pêche artisanale et lutter contre les pratiques de pêche illégales ou destructrices.";
-        texte4.CrossFadeAlpha(1f, 1f, false);
+        // texte1.text = "Pourtant, les baleines apportent de formidables services ï¿½cosystï¿½miques. Vï¿½ritables ingï¿½nieures des ocï¿½ans, elles sï¿½questrent le carbonne dans le fond des ocï¿½ans et assurent ainsi la pï¿½rï¿½nitï¿½ de la vie sauvage marine.";
+        // texte1.CrossFadeAlpha(1f, 1f, false);
+        // yield return new WaitForSeconds(0.75f);
+        // texte2.text = "Les protï¿½ger et assurer la croissance de leurs population devrait ï¿½tre adoptï¿½ partout comme un ï¿½lï¿½ment d'une gestion carbonne responsable. Des propositions concrï¿½tes sont proposï¿½e par le programmes NUPES :";
+        // texte2.CrossFadeAlpha(1f, 1f, false);
+        // yield return new WaitForSeconds(0.75f);
+        // texte3.CrossFadeAlpha(1f, 1f, false);
+        // texte3.text = "Classer plus de 30% du territoire maritime franï¿½ais en aire maritime protï¿½gï¿½e, dont 10% en protection forte, pour en faire de vï¿½ritables sanctuaires.";
+        // yield return new WaitForSeconds(0.75f);
+        // yield return new WaitForSeconds(0.75f);
+        // texte4.text = "Gï¿½rer durablement la ressource via la pï¿½che artisanale et lutter contre les pratiques de pï¿½che illï¿½gales ou destructrices.";
+        // texte4.CrossFadeAlpha(1f, 1f, false);
 
-        yield return new WaitForSeconds(0.75f);
-        texte1.CrossFadeAlpha(0f, 1f, false);
-        texte2.CrossFadeAlpha(0f, 1f, false);
-        texte3.CrossFadeAlpha(0f, 1f, false);
-        texte4.CrossFadeAlpha(0f, 1f, false);
+        // texte1.CrossFadeAlpha(0f, 1f, false);
+        // texte2.CrossFadeAlpha(0f, 1f, false);
+        // texte3.CrossFadeAlpha(0f, 1f, false);
+        // texte4.CrossFadeAlpha(0f, 1f, false);
+
+        float _delayBtwTxt = 3f;
+
+        texte1.gameObject.SetActive(true);
+        yield return new WaitForSeconds(_delayBtwTxt);
+
+        texte2.gameObject.SetActive(true);
+        yield return new WaitForSeconds(_delayBtwTxt);
+
+        texte3.gameObject.SetActive(true);
+        yield return new WaitForSeconds(_delayBtwTxt);
+
+        texte4.gameObject.SetActive(true);
+        yield return new WaitForSeconds(_delayBtwTxt);
+
 
         quitter.gameObject.SetActive(true);
         rejouer.gameObject.SetActive(true);
 
-
+        yield return null;
     }
-    // Start is called before the first frame update
+
+
     void Start()
     {
-        texte1.color = Color.black;
-        texte2.color = Color.black;
-        texte3.color = Color.black;
-        texte4.color = Color.black;
+        // texte1.color = Color.black;
+        // texte2.color = Color.black;
+        // texte3.color = Color.black;
+        // texte4.color = Color.black;
+
+        texte1.gameObject.SetActive(false);
+        texte2.gameObject.SetActive(false);
+        texte3.gameObject.SetActive(false);
+        texte4.gameObject.SetActive(false);
+
+
 
 
         rejouer.gameObject.SetActive(false);
         quitter.gameObject.SetActive(false);
-        texte1.text = "À sa mort, votre baleine à récupérée 28 tonnes de CO2.";
+
+        texte1.text = "ï¿½ sa mort, votre baleine ï¿½ rï¿½cupï¿½rï¿½e 28 tonnes de CO2.";
         texte2.text = "En 1900, les baleines permettaient le stockage de plus de 10 millions de tonnes de carbonnes contre 2 millions seulement en 2020.";
-        texte3.text = "Alors que le nombre de ces majestueux mamifères marins se stabilise enfin, offrant un espoir de croissance de leur population, elles se retrouvent à nouveau menacé par les activités humaines.";
-        texte4.text = "Certaines nations continuent la chasse, d'autres jettent leurs innombrables déchets dans l'océan et toutes contribuent aux émissions de gaz à effet de serres.";
+        texte3.text = "Alors que le nombre de ces majestueux mamifï¿½res marins se stabilise enfin, offrant un espoir de croissance de leur population, elles se retrouvent ï¿½ nouveau menacï¿½ par les activitï¿½s humaines.";
+        texte4.text = "Certaines nations continuent la chasse, d'autres jettent leurs innombrables dï¿½chets dans l'ocï¿½an et toutes contribuent aux ï¿½missions de gaz ï¿½ effet de serres.";
         StartCoroutine(AfficherTextes());
     }
 
-    // Update is called once per frame
     void Update()
     {
         // rejouer.onClick(SceneManager.LoadScene(jeu));
         // quitter.onClick(quitter lol);
+    }
+
+    public void ReloadGame()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void QuitGame(){
+        Application.Quit();
     }
 }

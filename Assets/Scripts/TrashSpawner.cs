@@ -10,7 +10,6 @@ public class TrashSpawner : MonoBehaviour
     private JaugeSystem _jaugeSystem;
     int _pollutionPercent;
 
-
     private void Awake()
     {
         _jaugeSystem = FindObjectOfType<JaugeSystem>();

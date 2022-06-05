@@ -23,6 +23,17 @@ public class FlyLikeController : MonoBehaviour
     public Vector2 MoveValue { get => moveValue; }
     public bool Boosting { get => boosting; }
 
+    //Bordel Rubens
+
+    [SerializeField] float TimeRotationAtSurface = 1;
+    bool ShouldTurn = false;
+
+    float InitialRotation;
+    float InitialTime;
+    float LerpRotation;
+    [SerializeField] float MaxHeight;
+    [SerializeField] float MinHeight;
+
     private void Awake()
     {
         speed = m_constantSpeed;
@@ -70,7 +81,44 @@ public class FlyLikeController : MonoBehaviour
     {
         rb.velocity = transform.forward * speed;
         float fixedDeltaTime = Time.fixedDeltaTime;
-        transform.rotation = Quaternion.AngleAxis(moveValue.y * m_yaw * fixedDeltaTime, transform.right) 
+
+        //LIGNE DEGUEU
+        if (transform.position.y >= 59 && !ShouldTurn)
+        {
+            ResetRotation();
+        }
+        //LIGNE DEGUEU au dessus
+
+        transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, MinHeight, MaxHeight), transform.position.z);
+        
+        if (ShouldTurn)
+        {
+
+            LerpRotation = Mathf.InverseLerp(InitialTime, (InitialTime + TimeRotationAtSurface), Time.time);
+            Debug.Log("Lerp Rotation = " + LerpRotation);
+
+
+            transform.eulerAngles = new Vector3 (Mathf.LerpAngle(InitialRotation, 15, LerpRotation), transform.eulerAngles.y, transform.eulerAngles.z);
+            Debug.Log("Valeur en X = " + Mathf.LerpAngle(InitialRotation, 15, LerpRotation));
+
+            if (Time.time >= InitialTime + TimeRotationAtSurface)
+            {
+                ShouldTurn = false;
+            }
+
+        }
+        else
+        {
+            transform.rotation = Quaternion.AngleAxis(moveValue.y * m_yaw * fixedDeltaTime, transform.right)
             * Quaternion.AngleAxis(moveValue.x * m_pitch * fixedDeltaTime, transform.up) * transform.rotation;
+        }
     }
+
+    public void ResetRotation()
+    {
+        ShouldTurn = true;
+        InitialRotation = transform.eulerAngles.x;
+        InitialTime = Time.time;
+    }
+
 }

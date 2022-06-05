@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class JaugeSystem : MonoBehaviour
 {
+    #region Jauge Data, System...
     //Valeur � retrancher periodiquement
 
     [Header("VALEUR PERIODIQUE")]
@@ -30,15 +32,23 @@ public class JaugeSystem : MonoBehaviour
 
     //Jauge
 
-    int JaugeNourriture = 800;
+    [Header ("Jauge Debug - Read Only")]
+    [SerializeField] int JaugeNourriture = 800;
 
-    int JaugeRespiration = 1000;
+    [SerializeField]  int JaugeRespiration = 1000;
 
     int JaugePollution = 0;
 
     //Bool�en Etat du Jeu
 
     bool ALaSurface;
+    #endregion
+
+     
+    /// UI
+    [Header ("UI Elements")]
+    [SerializeField] Image _imgOxygeneJauge;
+    [SerializeField] Image _imgEatingJauge;
 
 
     void MangerPoisson()
@@ -75,7 +85,7 @@ public class JaugeSystem : MonoBehaviour
 
         //RESPIRATION 
 
-        if (transform.position.y >= 50)
+        if (transform.position.y <= 50)
         {
             JaugeRespiration -= Apnee;
         }
@@ -93,6 +103,12 @@ public class JaugeSystem : MonoBehaviour
         JaugeNourriture = Mathf.Clamp(JaugeNourriture, -1000, 1000);
 
         JaugeRespiration = Mathf.Clamp(JaugeRespiration, -1000, 1000);
+
+        //UI
+
+        _imgEatingJauge.fillAmount = JaugeNourriture / 100;
+        _imgOxygeneJauge.fillAmount = JaugeRespiration / 100;
+
 
         //GAME OVER
 
@@ -117,9 +133,6 @@ public class JaugeSystem : MonoBehaviour
             MangerPoisson();
             Destroy(other.gameObject);
             Debug.Log("Destroying Fish");
-
         }
-
     }
-
 }

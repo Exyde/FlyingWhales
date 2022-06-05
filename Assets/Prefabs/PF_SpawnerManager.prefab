@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 94799772572056328}
   - component: {fileID: 5727901575186344752}
+  - component: {fileID: 626830146}
   m_Layer: 0
   m_Name: PF_SpawnerManager
   m_TagString: Untagged
@@ -43,5 +44,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de20baea5d9aeac47974010ce6f10993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ListePositionChunk: []
+  ListSpawn: []
+  ListePositionChunk:
+  - {x: 55, y: 0, z: -100}
+  - {x: -180, y: 0, z: 100}
+  - {x: 55, y: 0, z: 60}
+  - {x: -90, y: 0, z: 90}
+  - {x: 0, y: 0, z: 0}
+  - {x: -100, y: 0, z: -100}
+  - {x: 50, y: 0, z: 0}
+  - {x: -50, y: 0, z: 0}
+  - {x: -200, y: 0, z: -100}
+  - {x: 100, y: 0, z: -50}
   PrefabSpawn: {fileID: 8075973820141966825, guid: 2eff21d154bf0bb4b9ba995db5b20fcf, type: 3}
+--- !u!114 &626830146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4815419450480012268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe356209f5385cb4e9206701c3de73b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timerName: 
+  _timerDuration: 5
+  _timeElapsed: 0
+  _isLoopTimer: 1
+  _shouldTimerRun: 1
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5727901575186344752}
+        m_TargetAssemblyTypeName: SpawnEditor, Assembly-CSharp
+        m_MethodName: RandomGeneration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

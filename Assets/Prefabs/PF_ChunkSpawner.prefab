@@ -45,8 +45,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3df508d9019179f4abf0fefb2774a8d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fishPrefabs: []
-  _garbagePrefabs: []
+  _fishPrefabs:
+  - {fileID: 748925752915705197, guid: b4b1f020ec4d46f46854d9a961a8910e, type: 3}
+  - {fileID: 5542458109566390662, guid: b7cf16d42f8d16f4ea5458e8dabc7824, type: 3}
+  - {fileID: 8012207462505878058, guid: 90de10aefc9d3e14fa07feaddf848b1f, type: 3}
+  - {fileID: 7457941427620735054, guid: 2e70371382231f54d97b067d46d9d908, type: 3}
+  _garbagePrefabs:
+  - {fileID: 6779832743598144812, guid: c4b583fbd04923241b21f51aa0d3898c, type: 3}
+  - {fileID: 839857657820307082, guid: d9d941b61a27bf743904d8e9e0e27ef4, type: 3}
+  - {fileID: 1887691247920821292, guid: c4911b61576ef244cb399c9346ff7bb5, type: 3}
+  - {fileID: 2311317235595700493, guid: 345046f2b29d4c64f9a98fad40e38731, type: 3}
+  - {fileID: 1102552474570979301, guid: 0eed3363ff16c8949b962e492b87c9c5, type: 3}
+  - {fileID: 555339431053700725, guid: 14ec7a979692d684c9ba2cde7cdb86f4, type: 3}
+  - {fileID: 1327139767073707040, guid: f66c227711a1e684ab3796570eca6762, type: 3}
+  - {fileID: 1821761071395743125, guid: 79afac3b10ba9f44888cadd41135df98, type: 3}
+  - {fileID: 3842600103479616876, guid: c029afea285df74439805b31c350c3c2, type: 3}
   _garbagePercentagePerChunk: 58
   _numberOfEntityPerChunk: 100
   _sphereSpawnRadius: 10

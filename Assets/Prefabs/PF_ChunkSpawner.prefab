@@ -60,12 +60,12 @@ MonoBehaviour:
   - {fileID: 1327139767073707040, guid: f66c227711a1e684ab3796570eca6762, type: 3}
   - {fileID: 1821761071395743125, guid: 79afac3b10ba9f44888cadd41135df98, type: 3}
   - {fileID: 3842600103479616876, guid: c029afea285df74439805b31c350c3c2, type: 3}
-  _garbagePercentagePerChunk: 58
+  _garbagePercentagePerChunk: 20
   _numberOfEntityPerChunk: 100
-  _sphereSpawnRadius: 10
+  _sphereSpawnRadius: 3
   _debug: 1
   _debugColor: {r: 0.8113208, g: 0.36356357, b: 0.36356357, a: 1}
-  _clearTransformOnSpawn: 0
+  _clearTransformOnSpawn: 1
 --- !u!114 &8075973820141966826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,5 +110,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7267d856fd0b02448966374695215aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
-  _amplitude: 1
+  _speed: 0.8
+  _amplitude: 2.5

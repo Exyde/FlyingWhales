@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,7 +14,6 @@ public class GameManager : MonoBehaviour
         if (_instance != null && _instance != this){
             Destroy (this.gameObject);
         }
-
         _instance = this;
     }
 
@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     }
     public void EndGame(){
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     #endregion
 

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8075973820141966828}
   - component: {fileID: 8075973820141966827}
   - component: {fileID: 8075973820141966826}
+  - component: {fileID: 823514519061611196}
   m_Layer: 0
   m_Name: PF_ChunkSpawner
   m_TagString: Untagged
@@ -44,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3df508d9019179f4abf0fefb2774a8d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fishPrefab: {fileID: 7900265971213789196, guid: 8f8caf5951da3d64ebadea45af2bd9b1, type: 3}
-  _garbagePrefab: {fileID: 8583321143029228437, guid: e6d1cb70f2c752240bee07f8f52459bb, type: 3}
+  _fishPrefabs: []
+  _garbagePrefabs: []
   _garbagePercentagePerChunk: 58
   _numberOfEntityPerChunk: 100
   _sphereSpawnRadius: 10
@@ -84,3 +85,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &823514519061611196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8075973820141966825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7267d856fd0b02448966374695215aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 1
+  _amplitude: 1

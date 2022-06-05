@@ -87,7 +87,7 @@ public class FlyLikeController : MonoBehaviour
         {
             ResetRotation();
         }
-        //LIGNE DEGUEU au dessus
+        //LIGNE DEGUEU fin
 
         transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, MinHeight, MaxHeight), transform.position.z);
         
@@ -112,7 +112,11 @@ public class FlyLikeController : MonoBehaviour
             transform.rotation = Quaternion.AngleAxis(moveValue.y * m_yaw * fixedDeltaTime, transform.right)
             * Quaternion.AngleAxis(moveValue.x * m_pitch * fixedDeltaTime, transform.up) * transform.rotation;
         }
+
+        transform.eulerAngles = new Vector3 (transform.eulerAngles.x, transform.eulerAngles.y, 0);
     }
+
+    
 
     public void ResetRotation()
     {

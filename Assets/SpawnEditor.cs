@@ -10,6 +10,9 @@ public class SpawnEditor : MonoBehaviour
 
     int RandomN;
 
+    public bool _debug;
+    public float _gizmosRadius;
+
     [SerializeField] GameObject PrefabSpawn;
 
     private void Start()
@@ -19,7 +22,14 @@ public class SpawnEditor : MonoBehaviour
         {
             ListSpawn.Add(Instantiate(PrefabSpawn, ListePositionChunk[i].position, transform.rotation, transform));
         }
-        
+
+        RandomGeneration();
+        RandomGeneration();
+        RandomGeneration();
+        RandomGeneration();
+        RandomGeneration();
+
+
     }
 
     public void RandomGeneration()
@@ -30,6 +40,29 @@ public class SpawnEditor : MonoBehaviour
         ListSpawn[RandomN].GetComponent<ChunkSpawner>().SpawnNewChunk();
 
 
+    }
+
+    public void RandomDestruction()
+    {
+        RandomN = Random.Range(0, ListSpawn.Count);
+
+        ListSpawn[RandomN].GetComponent<ChunkSpawner>().ClearTransform();
+
+        ListSpawn.RemoveAt(RandomN);
+
+
+    }
+
+    void OnDrawGizmos()
+    {
+        if (!_debug) return;
+
+        Gizmos.color = Color.green;
+
+        foreach (Transform t in ListePositionChunk)
+        {
+            Gizmos.DrawSphere(t.position, _gizmosRadius);
+        }
     }
 
 

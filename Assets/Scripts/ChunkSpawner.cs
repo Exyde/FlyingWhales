@@ -22,7 +22,8 @@ public class ChunkSpawner : MonoBehaviour
 
     int JaugePollution;
 
-    private void Start()
+    
+    private void Awake()
     {
         Player = GameObject.Find("PF_Player");
             
@@ -35,6 +36,7 @@ public class ChunkSpawner : MonoBehaviour
 
         JaugePollution = Player.GetComponent<JaugeSystem>().JaugePollution;
         _garbagePercentagePerChunk = Random.Range(Mathf.Sqrt(4.5f * JaugePollution), 20 + Mathf.Sqrt(6.3f * JaugePollution));
+        Debug.Log("A popé avec un pourcentage de "+_garbagePercentagePerChunk);
 
         if (_clearTransformOnSpawn) ClearTransform();
         // Debug.Log("Spawning Chunks");

@@ -75,7 +75,7 @@ public class JaugeSystem : MonoBehaviour
 
         //RESPIRATION 
 
-        if (!ALaSurface)
+        if (transform.position.y >= 50)
         {
             JaugeRespiration -= Apnee;
         }

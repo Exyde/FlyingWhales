@@ -161,7 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Faim: 10
   Apnee: 20
-  Respiration: 200
+  Respiration: 500
   Pollution: 2
   PoissonImpactNourriture: 5
   DechetImpactNourriture: 3
@@ -219,6 +219,9 @@ MonoBehaviour:
   m_endBoostDuration: 1
   m_yaw: 25
   m_pitch: 25
+  TimeRotationAtSurface: 1
+  MaxHeight: 59.65
+  MinHeight: 0
 --- !u!1 &6376822851074796543
 GameObject:
   m_ObjectHideFlags: 0

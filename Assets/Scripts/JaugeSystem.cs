@@ -106,8 +106,14 @@ public class JaugeSystem : MonoBehaviour
 
         //UI
 
-        _imgEatingJauge.fillAmount = JaugeNourriture / 100;
-        _imgOxygeneJauge.fillAmount = JaugeRespiration / 100;
+        float oxygeneFill = (float)JaugeRespiration / 1000.0f;
+        float eatingFill = (float)JaugeNourriture / 1000.0f;
+        _imgEatingJauge.fillAmount = eatingFill;
+        _imgOxygeneJauge.fillAmount = oxygeneFill;
+
+        // Debug.Log("Oxygene : " + oxygeneFill);
+        // Debug.Log("Nourriture : " + eatingFill);
+
 
 
         //GAME OVER

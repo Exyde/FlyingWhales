@@ -731,6 +731,14 @@ PrefabInstance:
       propertyPath: m_RenderPostProcessing
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7865798111626371385, guid: cd7888eb6ab811d4f8df31f221babb60, type: 3}
+      propertyPath: MaxHeight
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7865798111626371385, guid: cd7888eb6ab811d4f8df31f221babb60, type: 3}
+      propertyPath: TimeRotationAtSurface
+      value: 2.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd7888eb6ab811d4f8df31f221babb60, type: 3}
 --- !u!1001 &2082643531953727377

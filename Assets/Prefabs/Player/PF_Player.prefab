@@ -145,8 +145,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.74, z: 1.29}
-  m_Center: {x: 0, y: 0.62, z: 0.59668285}
+  m_Size: {x: 1.5, y: 1.03, z: 2.74}
+  m_Center: {x: 0, y: 1.09, z: 1.07}
 --- !u!114 &660008101798273831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,6 +169,7 @@ MonoBehaviour:
   DechetImpactPollution: 2
   JaugeNourriture: 800
   JaugeRespiration: 1000
+  JaugePollution: 0
   _imgOxygeneJauge: {fileID: 0}
   _imgEatingJauge: {fileID: 0}
 --- !u!114 &7197945609289284459
@@ -217,14 +218,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_moveAction: {fileID: -5197085838421572701, guid: 006d34107570e464d9b51332d676a5c1, type: 3}
   m_boostAction: {fileID: 6871549696983627322, guid: 006d34107570e464d9b51332d676a5c1, type: 3}
-  m_constantSpeed: 20
-  m_boostSpeed: 20
+  m_constantSpeed: 3
+  m_boostSpeed: 10
   m_boostDuration: 2
-  m_endBoostDuration: 1
-  m_yaw: 25
-  m_pitch: 25
-  TimeRotationAtSurface: 1.25
-  MaxHeight: 60.25
+  m_endBoostDuration: 2
+  m_yaw: 35
+  m_pitch: 35
+  TimeRotationAtSurface: 1.5
+  MaxHeight: 60.35
   MinHeight: -400
   _splashesClips:
   - {fileID: 8300000, guid: 78c44eb510758ab41986f6c0ffe7a987, type: 3}
@@ -238,6 +239,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: da963b32375cb91488652045e8480087, type: 3}
   - {fileID: 8300000, guid: c449d486f5fe86147a081f728abe0d7f, type: 3}
   - {fileID: 8300000, guid: ff084bd5e3a7ec2438438a2a2daaaa68, type: 3}
+  _waterSkybox: {fileID: 0}
+  _outerSkybox: {fileID: 0}
 --- !u!1 &6376822851074796543
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,6 +385,18 @@ PrefabInstance:
     - target: {fileID: 1656981993287255956, guid: 8d71edec9c42ffb4989943050a8d39f7, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656981993287255956, guid: 8d71edec9c42ffb4989943050a8d39f7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656981993287255956, guid: 8d71edec9c42ffb4989943050a8d39f7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656981993287255956, guid: 8d71edec9c42ffb4989943050a8d39f7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1656981993287255956, guid: 8d71edec9c42ffb4989943050a8d39f7, type: 3}
       propertyPath: m_LocalPosition.x

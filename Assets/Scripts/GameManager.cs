@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager _instance;
@@ -10,24 +11,31 @@ public class GameManager : MonoBehaviour
     [SerializeField] PlayerController _player;
     [SerializeField] Camera _cam;
 
-    private void Awake(){
-        if (_instance != null && _instance != this){
-            Destroy (this.gameObject);
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
         }
         _instance = this;
     }
 
     #region Public Methods
-    public void ReloadGame(){
+    public void ReloadGame()
+    {
 
     }
-    public void SetupGame(){
+    public void SetupGame()
+    {
 
     }
-    public void EndGame(){
+    public void EndGame()
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     #endregion
 
+
+    
 
 }

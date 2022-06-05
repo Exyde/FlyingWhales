@@ -233,11 +233,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5fd9781807782434cbd6cdc7014f7a03, type: 3}
   - {fileID: 8300000, guid: ff825d4a8affe9246965cda2c6a5fa54, type: 3}
   _dashClips:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 02d4bfa738e6ad149915fe880df4c2ee, type: 3}
+  - {fileID: 8300000, guid: a82ce6dadad6e3a4183e3dc3f3cf8edd, type: 3}
+  - {fileID: 8300000, guid: da963b32375cb91488652045e8480087, type: 3}
+  - {fileID: 8300000, guid: c449d486f5fe86147a081f728abe0d7f, type: 3}
+  - {fileID: 8300000, guid: ff084bd5e3a7ec2438438a2a2daaaa68, type: 3}
 --- !u!1 &6376822851074796543
 GameObject:
   m_ObjectHideFlags: 0

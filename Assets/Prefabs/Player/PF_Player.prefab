@@ -145,8 +145,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 0.4568596, z: 1.3068384}
-  m_Center: {x: 0, y: 0.43256998, z: 0.59668285}
+  m_Size: {x: 1.5, y: 1.6925614, z: 2.5067358}
+  m_Center: {x: 0, y: 1.0504209, z: 1.1966317}
 --- !u!114 &660008101798273831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,10 +163,10 @@ MonoBehaviour:
   Apnee: 20
   Respiration: 500
   Pollution: 2
-  PoissonImpactNourriture: 5
-  DechetImpactNourriture: 3
-  DechetImpactRespiration: 10
-  DechetImpactPollution: 2
+  PoissonImpactNourriture: 25
+  DechetImpactNourriture: 15
+  DechetImpactRespiration: 20
+  DechetImpactPollution: 3
   JaugeNourriture: 800
   JaugeRespiration: 1000
   JaugePollution: 0
@@ -255,6 +255,7 @@ GameObject:
   - component: {fileID: 4019129530433983803}
   - component: {fileID: 8407001810716455554}
   - component: {fileID: 1572395482}
+  - component: {fileID: 7915203824145720732}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -377,6 +378,23 @@ MonoBehaviour:
   m_offsetSpeedY: 1
   m_offsetSpeedZ: 1
 --- !u!114 &1572395482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6376822851074796543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: ac12e6d8106ce454898366c8ef524253, type: 2}
+--- !u!114 &7915203824145720732
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

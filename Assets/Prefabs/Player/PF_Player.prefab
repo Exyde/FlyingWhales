@@ -159,13 +159,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01b3a9161d3eb0241bd4d56fe9425461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Faim: 5
+  Faim: 8
   Apnee: 10
   Respiration: 333
   Pollution: 3
   PoissonImpactNourriture: 10
   DechetImpactNourriture: 3
-  DechetImpactRespiration: 15
+  DechetImpactRespiration: 12
   DechetImpactPollution: 8
   JaugeNourriture: 1000
   JaugeRespiration: 1000
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_cameraOffset: {x: 0, y: 4, z: -9}
   m_offsetSpeedX: 1
   m_offsetSpeedY: 1
-  m_offsetSpeedZ: 1
+  m_offsetSpeedZ: 3
 --- !u!114 &1572395482
 MonoBehaviour:
   m_ObjectHideFlags: 0

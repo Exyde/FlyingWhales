@@ -727,7 +727,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de20baea5d9aeac47974010ce6f10993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ListSpawn: []
+  ListSpawn:
+  - {fileID: 0}
   ListePositionChunk:
   - {fileID: 401107567}
   - {fileID: 79523741}

@@ -159,15 +159,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01b3a9161d3eb0241bd4d56fe9425461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Faim: 10
-  Apnee: 20
+  Faim: 5
+  Apnee: 10
   Respiration: 500
   Pollution: 2
   PoissonImpactNourriture: 25
   DechetImpactNourriture: 15
   DechetImpactRespiration: 20
   DechetImpactPollution: 3
-  JaugeNourriture: 800
+  JaugeNourriture: 1000
   JaugeRespiration: 1000
   JaugePollution: 0
   _imgOxygeneJauge: {fileID: 0}

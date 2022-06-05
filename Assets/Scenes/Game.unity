@@ -174,25 +174,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 998091587012881504, guid: 4eb0d3670312d464a92f30b3a83bccbb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 1202772383448011839, guid: 4eb0d3670312d464a92f30b3a83bccbb, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 4815419450480012268, guid: 4eb0d3670312d464a92f30b3a83bccbb, type: 3}
       propertyPath: m_Name
       value: PF_SpawnerManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 5727901575186344752, guid: 4eb0d3670312d464a92f30b3a83bccbb, type: 3}
-      propertyPath: ListSpawn.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5727901575186344752, guid: 4eb0d3670312d464a92f30b3a83bccbb, type: 3}
-      propertyPath: ListSpawn.Array.data[0]
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4eb0d3670312d464a92f30b3a83bccbb, type: 3}

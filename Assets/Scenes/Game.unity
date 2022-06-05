@@ -492,10 +492,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4019129530433983803, guid: cd7888eb6ab811d4f8df31f221babb60, type: 3}
-      propertyPath: m_RenderPostProcessing
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd7888eb6ab811d4f8df31f221babb60, type: 3}
 --- !u!1001 &2082643531953727377

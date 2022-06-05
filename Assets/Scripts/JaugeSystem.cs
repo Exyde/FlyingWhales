@@ -108,13 +108,16 @@ public class JaugeSystem : MonoBehaviour
         if (other.tag == "Garbage")
         {
             MangerDechet();
-            Destroy(other);
+            Destroy(other.gameObject);
+            Debug.Log("Destroying Trash");
         }
 
         if (other.tag == "Fish")
         {
             MangerPoisson();
-            Destroy(other);
+            Destroy(other.gameObject);
+            Debug.Log("Destroying Fish");
+
         }
 
     }

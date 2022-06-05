@@ -145,8 +145,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.03, z: 2.74}
-  m_Center: {x: 0, y: 1.09, z: 1.07}
+  m_Size: {x: 1.5, y: 0.4568596, z: 1.3068384}
+  m_Center: {x: 0, y: 0.43256998, z: 0.59668285}
 --- !u!114 &660008101798273831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,14 +218,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_moveAction: {fileID: -5197085838421572701, guid: 006d34107570e464d9b51332d676a5c1, type: 3}
   m_boostAction: {fileID: 6871549696983627322, guid: 006d34107570e464d9b51332d676a5c1, type: 3}
-  m_constantSpeed: 3
-  m_boostSpeed: 10
+  m_constantSpeed: 20
+  m_boostSpeed: 20
   m_boostDuration: 2
   m_endBoostDuration: 2
   m_yaw: 35
   m_pitch: 35
   TimeRotationAtSurface: 1.5
-  MaxHeight: 60.35
+  MaxHeight: 59.65
   MinHeight: -400
   _splashesClips:
   - {fileID: 8300000, guid: 78c44eb510758ab41986f6c0ffe7a987, type: 3}
@@ -239,8 +239,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: da963b32375cb91488652045e8480087, type: 3}
   - {fileID: 8300000, guid: c449d486f5fe86147a081f728abe0d7f, type: 3}
   - {fileID: 8300000, guid: ff084bd5e3a7ec2438438a2a2daaaa68, type: 3}
-  _waterSkybox: {fileID: 0}
-  _outerSkybox: {fileID: 0}
+  _waterSkybox: {fileID: 2100000, guid: 119ec07f1c7ed204db46bd8465fd5a50, type: 2}
+  _outerSkybox: {fileID: 2100000, guid: d04fa9ef91692c6429efccdf42970c46, type: 2}
 --- !u!1 &6376822851074796543
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 8955865158490275992}
   - component: {fileID: 4019129530433983803}
   - component: {fileID: 8407001810716455554}
+  - component: {fileID: 1572395482}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -348,7 +349,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -375,6 +376,23 @@ MonoBehaviour:
   m_offsetSpeedX: 1
   m_offsetSpeedY: 1
   m_offsetSpeedZ: 1
+--- !u!114 &1572395482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6376822851074796543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: ac12e6d8106ce454898366c8ef524253, type: 2}
 --- !u!1001 &9005129503434499639
 PrefabInstance:
   m_ObjectHideFlags: 0

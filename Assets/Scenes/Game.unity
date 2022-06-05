@@ -331,63 +331,50 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8588505885425990436, guid: f372f4cf099da86448fc9552f3462685, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 49.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 9117965660092902092, guid: f372f4cf099da86448fc9552f3462685, type: 3}
-      propertyPath: m_Name
-      value: PF_PropsTerrain
-      objectReference: {fileID: 0}
-    - target: {fileID: 9117965660092902093, guid: f372f4cf099da86448fc9552f3462685, type: 3}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 9117965660092902093, guid: f372f4cf099da86448fc9552f3462685, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9117965660092902093, guid: f372f4cf099da86448fc9552f3462685, type: 3}
+    - target: {fileID: 8588505885425990436, guid: f372f4cf099da86448fc9552f3462685, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 49.85
       objectReference: {fileID: 0}
-    - target: {fileID: 9117965660092902093, guid: f372f4cf099da86448fc9552f3462685, type: 3}
+    - target: {fileID: 8588505885425990436, guid: f372f4cf099da86448fc9552f3462685, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9117965660092902093, guid: f372f4cf099da86448fc9552f3462685, type: 3}
+    - target: {fileID: 8588505885425990436, guid: f372f4cf099da86448fc9552f3462685, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9117965660092902093, guid: f372f4cf099da86448fc9552f3462685, type: 3}
+    - target: {fileID: 8588505885425990436, guid: f372f4cf099da86448fc9552f3462685, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9117965660092902093, guid: f372f4cf099da86448fc9552f3462685, type: 3}
+    - target: {fileID: 8588505885425990436, guid: f372f4cf099da86448fc9552f3462685, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9117965660092902093, guid: f372f4cf099da86448fc9552f3462685, type: 3}
+    - target: {fileID: 8588505885425990436, guid: f372f4cf099da86448fc9552f3462685, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9117965660092902093, guid: f372f4cf099da86448fc9552f3462685, type: 3}
+    - target: {fileID: 8588505885425990436, guid: f372f4cf099da86448fc9552f3462685, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9117965660092902093, guid: f372f4cf099da86448fc9552f3462685, type: 3}
+    - target: {fileID: 8588505885425990436, guid: f372f4cf099da86448fc9552f3462685, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9117965660092902093, guid: f372f4cf099da86448fc9552f3462685, type: 3}
+    - target: {fileID: 8588505885425990436, guid: f372f4cf099da86448fc9552f3462685, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 55568232, guid: f372f4cf099da86448fc9552f3462685, type: 3}
-    - {fileID: 1971308956, guid: f372f4cf099da86448fc9552f3462685, type: 3}
-    - {fileID: 2093447018, guid: f372f4cf099da86448fc9552f3462685, type: 3}
-    - {fileID: 1859490003, guid: f372f4cf099da86448fc9552f3462685, type: 3}
-    - {fileID: 181027232, guid: f372f4cf099da86448fc9552f3462685, type: 3}
+    - target: {fileID: 8588505885425990437, guid: f372f4cf099da86448fc9552f3462685, type: 3}
+      propertyPath: m_Name
+      value: PF_PropsTerrain
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f372f4cf099da86448fc9552f3462685, type: 3}
 --- !u!1 &2008929224
 GameObject:

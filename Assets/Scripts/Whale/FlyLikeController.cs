@@ -95,11 +95,9 @@ public class FlyLikeController : MonoBehaviour
         {
 
             LerpRotation = Mathf.InverseLerp(InitialTime, (InitialTime + TimeRotationAtSurface), Time.time);
-            Debug.Log("Lerp Rotation = " + LerpRotation);
 
 
-            transform.eulerAngles = new Vector3 (Mathf.LerpAngle(InitialRotation, 15, LerpRotation), transform.eulerAngles.y, transform.eulerAngles.z);
-            Debug.Log("Valeur en X = " + Mathf.LerpAngle(InitialRotation, 15, LerpRotation));
+            transform.eulerAngles = new Vector3 (Mathf.LerpAngle(InitialRotation, 30, LerpRotation), transform.eulerAngles.y, transform.eulerAngles.z);
 
             if (Time.time >= InitialTime + TimeRotationAtSurface)
             {

@@ -38,6 +38,9 @@ public class FlyLikeController : MonoBehaviour
     [SerializeField] AudioClip[] _splashesClips;
     [SerializeField] AudioClip[] _dashClips;
 
+    [Header("Skybox")]
+    [SerializeField] Material _waterSkybox;
+    [SerializeField] Material _outerSkybox;
 
     private void Awake()
     {
@@ -46,6 +49,8 @@ public class FlyLikeController : MonoBehaviour
         m_moveAction.action.performed += OnMovePerformed;
         m_moveAction.action.canceled += OnMoveCanceled;
         m_boostAction.action.performed += OnBoostPerformed;
+
+        RenderSettings.skybox = _waterSkybox;
     }
 
     private void OnBoostPerformed(InputAction.CallbackContext obj)
@@ -126,7 +131,7 @@ public class FlyLikeController : MonoBehaviour
         InitialRotation = transform.eulerAngles.x;
         InitialTime = Time.time;
 
-        StartCoroutine(PlaySoundDelayed( TimeRotationAtSurface / 2.0f));
+        //StartCoroutine(PlaySoundDelayed( TimeRotationAtSurface / 2.0f));
     }
 
     IEnumerator PlaySoundDelayed(float delay){
@@ -134,6 +139,24 @@ public class FlyLikeController : MonoBehaviour
         yield return new WaitForSeconds(delay);
         AudioClipPlayer.PlaySoundRandomFromArray(_splashesClips);
         yield return null;
+    }
+
+  
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Surface"){
+            RenderSettings.skybox = _outerSkybox;
+            AudioClipPlayer.PlaySoundRandomFromArray(_splashesClips);
+
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Surface"){
+            RenderSettings.skybox = _waterSkybox;
+            AudioClipPlayer.PlaySoundRandomFromArray(_splashesClips);
+        }
     }
 
 }

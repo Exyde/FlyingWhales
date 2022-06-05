@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 119ec07f1c7ed204db46bd8465fd5a50, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: d04fa9ef91692c6429efccdf42970c46, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.38496128, g: 0.6009269, b: 0.6361861, a: 1}
+  m_IndirectSpecularColor: {r: 0.64171827, g: 0.86604613, b: 0.88084984, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -728,6 +728,14 @@ PrefabInstance:
       value: -400
       objectReference: {fileID: 0}
     - target: {fileID: 7865798111626371385, guid: cd7888eb6ab811d4f8df31f221babb60, type: 3}
+      propertyPath: _outerSkybox
+      value: 
+      objectReference: {fileID: 2100000, guid: d04fa9ef91692c6429efccdf42970c46, type: 2}
+    - target: {fileID: 7865798111626371385, guid: cd7888eb6ab811d4f8df31f221babb60, type: 3}
+      propertyPath: _waterSkybox
+      value: 
+      objectReference: {fileID: 2100000, guid: 119ec07f1c7ed204db46bd8465fd5a50, type: 2}
+    - target: {fileID: 7865798111626371385, guid: cd7888eb6ab811d4f8df31f221babb60, type: 3}
       propertyPath: m_boostSpeed
       value: 20
       objectReference: {fileID: 0}
@@ -952,41 +960,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1243464558323481277, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1243464558323481277, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1243464558323481277, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
-      propertyPath: m_LocalRotation.x
+    - target: {fileID: 1243464558323481280, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
+      propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1243464558323481277, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1243464558323481277, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1243464558323481277, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3434894728924426328, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
       propertyPath: m_Name
       value: PF_WaterSurfaceShader
       objectReference: {fileID: 0}
-    - target: {fileID: 3434894728924426328, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
+    - target: {fileID: 3848505627075200848, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3848505627075200813, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8637172542351757726, guid: a757caab51bb1d64aa2ab8ea79faa400, type: 3}
       propertyPath: m_RootOrder

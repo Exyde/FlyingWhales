@@ -161,12 +161,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Faim: 5
   Apnee: 10
-  Respiration: 500
-  Pollution: 2
-  PoissonImpactNourriture: 25
-  DechetImpactNourriture: 15
-  DechetImpactRespiration: 20
-  DechetImpactPollution: 3
+  Respiration: 333
+  Pollution: 3
+  PoissonImpactNourriture: 10
+  DechetImpactNourriture: 3
+  DechetImpactRespiration: 15
+  DechetImpactPollution: 8
   JaugeNourriture: 1000
   JaugeRespiration: 1000
   JaugePollution: 0

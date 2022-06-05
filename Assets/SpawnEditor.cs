@@ -6,7 +6,7 @@ public class SpawnEditor : MonoBehaviour
 {
     public List<GameObject> ListSpawn;
 
-    public List<Vector3> ListePositionChunk;
+    public List<Transform> ListePositionChunk;
 
     int RandomN;
 
@@ -14,11 +14,10 @@ public class SpawnEditor : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(ListePositionChunk.Count);
 
         for (int i = 0; i != ListePositionChunk.Count; i++)
         {
-            ListSpawn.Add(Instantiate(PrefabSpawn, ListePositionChunk[i],transform.rotation, transform));
+            ListSpawn.Add(Instantiate(PrefabSpawn, ListePositionChunk[i].position, transform.rotation, transform));
         }
         
     }
@@ -30,7 +29,6 @@ public class SpawnEditor : MonoBehaviour
         ListSpawn[RandomN].GetComponent<ChunkSpawner>().ClearTransform();
         ListSpawn[RandomN].GetComponent<ChunkSpawner>().SpawnNewChunk();
 
-        Debug.Log("LoL");
 
     }
 

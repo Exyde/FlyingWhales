@@ -18,6 +18,7 @@ public class ChunkSpawner : MonoBehaviour
 
     [SerializeField] GameObject Player;
 
+
     TimerEvent _timerEvent;
 
     int JaugePollution;
@@ -32,10 +33,13 @@ public class ChunkSpawner : MonoBehaviour
         Garbagae, Fish
     }
 
+
     public void SpawnNewChunk(){
 
         JaugePollution = Player.GetComponent<JaugeSystem>().JaugePollution;
-        _garbagePercentagePerChunk = Random.Range(Mathf.Sqrt(4.5f * JaugePollution), 20 + Mathf.Sqrt(6.3f * JaugePollution));
+        float tempPercentage = Random.Range(Mathf.Sqrt(4.5f * JaugePollution), 20 + Mathf.Sqrt(6.3f * JaugePollution));
+        _garbagePercentagePerChunk = Mathf.Clamp(tempPercentage, 0, 100);
+
         Debug.Log("A popé avec un pourcentage de "+_garbagePercentagePerChunk);
 
         if (_clearTransformOnSpawn) ClearTransform();

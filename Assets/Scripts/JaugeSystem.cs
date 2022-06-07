@@ -85,7 +85,7 @@ public class JaugeSystem : MonoBehaviour
 
         //RESPIRATION 
 
-        if (transform.position.y <= 50)
+        if (transform.position.y <= 55)
         {
             JaugeRespiration -= Apnee;
         }
@@ -131,14 +131,14 @@ public class JaugeSystem : MonoBehaviour
         {
             MangerDechet();
             Destroy(other.gameObject);
-            Debug.Log("Destroying Trash");
+            //Debug.Log("Destroying Trash");
         }
 
         if (other.tag == "Fish")
         {
             MangerPoisson();
             Destroy(other.gameObject);
-            Debug.Log("Destroying Fish");
+            //Debug.Log("Destroying Fish");
         }
     }
 }

@@ -22,10 +22,10 @@ public class AudioManager : MonoBehaviour
 
     IEnumerator volumeTransition(AudioSource track1, AudioSource track2)
     {
-        Debug.Log("Lerping sound");
+        //Debug.Log("Lerping sound");
         for (float i = 0; i <= 1; i += 0.1f)
         {
-            Debug.Log("i : "  + i);
+            //Debug.Log("i : "  + i);
             track1.volume -= 0.1f;
             track2.volume += 0.1f;
             yield return new WaitForSeconds(_transitionDuration / 10);

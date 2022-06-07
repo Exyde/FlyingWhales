@@ -92,7 +92,7 @@ public class FlyLikeController : MonoBehaviour
         float fixedDeltaTime = Time.fixedDeltaTime;
 
         //LIGNE DEGUEU
-        if (transform.position.y >= 59.5 && !ShouldTurn)
+        if (transform.position.y >= 59.75 && !ShouldTurn)
         {
             
             ResetRotation();
@@ -107,7 +107,7 @@ public class FlyLikeController : MonoBehaviour
             LerpRotation = Mathf.InverseLerp(InitialTime, (InitialTime + TimeRotationAtSurface), Time.time);
 
 
-            transform.eulerAngles = new Vector3 (Mathf.LerpAngle(InitialRotation, 30, LerpRotation), transform.eulerAngles.y, transform.eulerAngles.z);
+            transform.eulerAngles = new Vector3 (Mathf.LerpAngle(InitialRotation, 35, LerpRotation), transform.eulerAngles.y, transform.eulerAngles.z);
 
             if (Time.time >= InitialTime + TimeRotationAtSurface)
             {

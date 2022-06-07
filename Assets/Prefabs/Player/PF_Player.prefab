@@ -159,13 +159,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01b3a9161d3eb0241bd4d56fe9425461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Faim: 8
-  Apnee: 10
+  Faim: 11
+  Apnee: 11
   Respiration: 333
-  Pollution: 3
+  Pollution: 4
   PoissonImpactNourriture: 10
-  DechetImpactNourriture: 3
-  DechetImpactRespiration: 12
+  DechetImpactNourriture: 2
+  DechetImpactRespiration: 7
   DechetImpactPollution: 8
   JaugeNourriture: 1000
   JaugeRespiration: 1000
@@ -224,8 +224,8 @@ MonoBehaviour:
   m_endBoostDuration: 2
   m_yaw: 35
   m_pitch: 35
-  TimeRotationAtSurface: 1.5
-  MaxHeight: 59.65
+  TimeRotationAtSurface: 1.75
+  MaxHeight: 60.5
   MinHeight: -400
   _splashesClips:
   - {fileID: 8300000, guid: 78c44eb510758ab41986f6c0ffe7a987, type: 3}
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_cameraOffset: {x: 0, y: 4, z: -9}
   m_offsetSpeedX: 1
   m_offsetSpeedY: 1
-  m_offsetSpeedZ: 3
+  m_offsetSpeedZ: 8
 --- !u!114 &1572395482
 MonoBehaviour:
   m_ObjectHideFlags: 0

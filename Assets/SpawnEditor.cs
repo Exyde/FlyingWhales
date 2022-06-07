@@ -6,14 +6,20 @@ public class SpawnEditor : MonoBehaviour
 {
     public List<GameObject> ListSpawn;
 
+    public AnimationCurve _curve;
+
+
     public List<Transform> ListePositionChunk;
 
     int RandomN;
+
+    [SerializeField] int NbSpawnDepart = 10;
 
     public bool _debug;
     public float _gizmosRadius;
 
     [SerializeField] GameObject PrefabSpawn;
+
 
     private void Start()
     {
@@ -23,11 +29,12 @@ public class SpawnEditor : MonoBehaviour
             ListSpawn.Add(Instantiate(PrefabSpawn, ListePositionChunk[i].position, transform.rotation, transform));
         }
 
-        RandomGeneration();
-        RandomGeneration();
-        RandomGeneration();
-        RandomGeneration();
-        RandomGeneration();
+        for (int i = 0; i != NbSpawnDepart; i++)
+        {
+            RandomGeneration();
+        }
+        
+        
 
 
     }
@@ -36,8 +43,11 @@ public class SpawnEditor : MonoBehaviour
     {
         RandomN = Random.Range(0, ListSpawn.Count);
 
-        ListSpawn[RandomN].GetComponent<ChunkSpawner>().ClearTransform();
-        ListSpawn[RandomN].GetComponent<ChunkSpawner>().SpawnNewChunk();
+        ChunkSpawner CurentChawk = ListSpawn[RandomN].GetComponent<ChunkSpawner>();
+
+        CurentChawk.ClearTransform();
+
+        CurentChawk.SpawnNewChunk();
 
 
     }
@@ -47,8 +57,6 @@ public class SpawnEditor : MonoBehaviour
         RandomN = Random.Range(0, ListSpawn.Count);
 
         ListSpawn[RandomN].GetComponent<ChunkSpawner>().ClearTransform();
-
-        ListSpawn.RemoveAt(RandomN);
 
 
     }

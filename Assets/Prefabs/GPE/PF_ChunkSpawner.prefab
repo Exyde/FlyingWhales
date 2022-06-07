@@ -66,6 +66,7 @@ MonoBehaviour:
   _debugColor: {r: 0.8113208, g: 0.36356357, b: 0.36356357, a: 1}
   _clearTransformOnSpawn: 1
   Player: {fileID: 0}
+  _typex: 0
 --- !u!114 &823514519061611196
 MonoBehaviour:
   m_ObjectHideFlags: 0

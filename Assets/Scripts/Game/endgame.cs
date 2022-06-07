@@ -30,16 +30,16 @@ public class endgame : MonoBehaviour
         texte4.gameObject.SetActive(true);
         yield return new WaitForSeconds(_delayBtwTxt);
 
-        texte1.text = "Pourtant, les baleines apportent de formidables services �cosyst�miques. V�ritables ing�nieures des oc�ans, elles s�questrent le carbonne dans le fond des oc�ans et assurent ainsi la p�r�nit� de la vie sauvage marine.";
+        texte1.text = "Pourtant, les baleines apportent de formidables services écosystémiques. Véritables ingénieures des océans, elles séquestrent le carbonne dans le fond des océans et assurent ainsi la pérénité de la vie sauvage marine.";
         yield return new WaitForSeconds(_delayBtwTxt);
 
-        texte2.text = "Les protéger et assurer la croissance de leurs population devrait �tre adopt� partout comme un �l�ment d'une gestion carbonne responsable. Des propositions concr�tes sont propos�e par le programmes NUPES :";
+        texte2.text = "Les protéger et assurer la croissance de leurs population devrait être adopté partout comme un élément d'une gestion carbonne responsable. Des propositions concrètes sont proposée par le programmes NUPES :";
         yield return new WaitForSeconds(_delayBtwTxt);
 
-        texte3.text = "Classer plus de 30% du territoire maritime fran�ais en aire maritime protégée, dont 10% en protection forte, pour en faire de v�ritables sanctuaires.";
+        texte3.text = "Classer plus de 30% du territoire maritime français en aire maritime protégée, dont 10% en protection forte, pour en faire de véritables sanctuaires.";
         yield return new WaitForSeconds(_delayBtwTxt);
 
-        texte4.text = "Gérer durablement la ressource via la p�che artisanale et lutter contre les pratiques de p�che ill�gales ou destructrices.";
+        texte4.text = "Gérer durablement la ressource via la peche artisanale et lutter contre les pratiques de peche illegales ou destructrices.";
         yield return new WaitForSeconds(_delayBtwTxt);
 
 

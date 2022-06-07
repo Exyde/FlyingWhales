@@ -40,7 +40,7 @@ public class ChunkSpawner : MonoBehaviour
         float tempPercentage = Random.Range(Mathf.Sqrt(4.5f * JaugePollution), 20 + Mathf.Sqrt(6.3f * JaugePollution));
         _garbagePercentagePerChunk = Mathf.Clamp(tempPercentage, 0, 100);
 
-        Debug.Log("A popé avec un pourcentage de "+_garbagePercentagePerChunk);
+        //Debug.Log("A popé avec un pourcentage de "+_garbagePercentagePerChunk);
 
         if (_clearTransformOnSpawn) ClearTransform();
         // Debug.Log("Spawning Chunks");

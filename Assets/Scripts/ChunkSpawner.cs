@@ -36,7 +36,7 @@ public class ChunkSpawner : MonoBehaviour
 
     public void SpawnNewChunk(){
 
-        JaugePollution = Player.GetComponent<JaugeSystem>().JaugePollution;
+        JaugePollution = Player.GetComponent<JaugeSystem>()._jaugeData.JaugePollution;
         float tempPercentage = Random.Range(Mathf.Sqrt(4.5f * JaugePollution), 20 + Mathf.Sqrt(6.3f * JaugePollution));
         _garbagePercentagePerChunk = Mathf.Clamp(tempPercentage, 0, 100);
 

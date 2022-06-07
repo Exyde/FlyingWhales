@@ -58,7 +58,7 @@ public class AudioManager : MonoBehaviour
     void Update()
     { 
 
-        _localPollution = _jaugeSystem.JaugePollution;
+        _localPollution = _jaugeSystem._jaugeData.JaugePollution;
 
         if (_localPollution >= 300)
         {

@@ -5,44 +5,46 @@ using UnityEngine.UI;
 
 public class JaugeSystem : MonoBehaviour
 {
-    #region Jauge Data, System...
-    //Valeur � retrancher periodiquement
+    //#region Jauge Data, System...
+    ////Valeur � retrancher periodiquement
 
-    [Header("VALEUR PERIODIQUE")]
+    //[Header("VALEUR PERIODIQUE")]
 
-    public int Faim;
+    //public int Faim;
 
-    public int Apnee;
+    //public int Apnee;
 
-    public int Respiration;
+    //public int Respiration;
 
-    public int Pollution;
+    //public int Pollution;
 
-    //Valeur � retrancher sur evenement
+    ////Valeur � retrancher sur evenement
 
-    [Header("VALEUR SUR TRIGGER")]
+    //[Header("VALEUR SUR TRIGGER")]
 
-    public int PoissonImpactNourriture;
+    //public int PoissonImpactNourriture;
 
-    public int DechetImpactNourriture;
+    //public int DechetImpactNourriture;
 
-    public int DechetImpactRespiration;
+    //public int DechetImpactRespiration;
 
-    public int DechetImpactPollution;
+    //public int DechetImpactPollution;
 
-    //Jauge
+    ////Jauge
 
-    [Header ("Jauge Debug - Read Only")]
-    public int JaugeNourriture = 800;
+    //[Header ("Jauge Debug")]
+    //public int JaugeNourriture = 1000;
 
-    public int JaugeRespiration = 1000;
+    //public int JaugeRespiration = 1000;
 
-    public int JaugePollution = 0;
+    //public int JaugePollution = 0;
+    //#endregion
+
+    [SerializeField] public JaugeData _jaugeData;
 
     //Bool�en Etat du Jeu
 
     bool ALaSurface;
-    #endregion
 
      
     /// UI
@@ -55,25 +57,25 @@ public class JaugeSystem : MonoBehaviour
     {
         //IMPACT JAUGE
 
-        JaugeNourriture += PoissonImpactNourriture;
+        _jaugeData.JaugeNourriture += _jaugeData.PoissonImpactNourriture;
 
         //CLAMPING TIME
 
-        JaugeNourriture = Mathf.Clamp(JaugeNourriture, -1000, 1000);
+        _jaugeData.JaugeNourriture = Mathf.Clamp(_jaugeData.JaugeNourriture, -1000, 1000);
     }
 
     void MangerDechet()
     {
         //IMPACT JAUGE 
 
-        JaugeNourriture += DechetImpactNourriture;
-        JaugeRespiration -= DechetImpactRespiration;
-        JaugePollution += DechetImpactPollution;
+       _jaugeData.JaugeNourriture += _jaugeData.DechetImpactNourriture;
+       _jaugeData.JaugeRespiration -= _jaugeData.DechetImpactRespiration;
+       _jaugeData.JaugePollution += _jaugeData.DechetImpactPollution;
 
         //CLAMPING TIME
 
-        JaugeNourriture = Mathf.Clamp(JaugeNourriture, -1000, 1000);
-        JaugeRespiration = Mathf.Clamp(JaugeRespiration, -1000, 1000);
+        _jaugeData.JaugeNourriture = Mathf.Clamp(_jaugeData.JaugeNourriture, -1000, 1000);
+        _jaugeData.JaugeRespiration = Mathf.Clamp(_jaugeData.JaugeRespiration, -1000, 1000);
 
     }
 
@@ -81,33 +83,33 @@ public class JaugeSystem : MonoBehaviour
     {
         //NOURRITURE
 
-        JaugeNourriture -= Faim;
+        _jaugeData.JaugeNourriture -= _jaugeData.Faim;
 
         //RESPIRATION 
 
         if (transform.position.y <= 55)
         {
-            JaugeRespiration -= Apnee;
+            _jaugeData.JaugeRespiration -= _jaugeData.Apnee;
         }
         else
         {
-            JaugeRespiration += Respiration;
+            _jaugeData.JaugeRespiration += _jaugeData.Respiration;
         }
 
         //POLLUTION
 
-        JaugePollution += Pollution;
+        _jaugeData.JaugePollution += _jaugeData.Pollution;
 
         //CLAMPING TIME
 
-        JaugeNourriture = Mathf.Clamp(JaugeNourriture, -1000, 1000);
+        _jaugeData.JaugeNourriture = Mathf.Clamp(_jaugeData.JaugeNourriture, -1000, 1000);
 
-        JaugeRespiration = Mathf.Clamp(JaugeRespiration, -1000, 1000);
+        _jaugeData.JaugeRespiration = Mathf.Clamp(_jaugeData.JaugeRespiration, -1000, 1000);
 
         //UI
 
-        float oxygeneFill = (float)JaugeRespiration / 1000.0f;
-        float eatingFill = (float)JaugeNourriture / 1000.0f;
+        float oxygeneFill = (float)_jaugeData.JaugeRespiration / 1000.0f;
+        float eatingFill = (float)_jaugeData.JaugeNourriture / 1000.0f;
         _imgEatingJauge.fillAmount = eatingFill;
         _imgOxygeneJauge.fillAmount = oxygeneFill;
 
@@ -118,7 +120,7 @@ public class JaugeSystem : MonoBehaviour
 
         //GAME OVER
 
-        if (JaugeRespiration <= 0 || JaugeNourriture <= 0)
+        if (_jaugeData.JaugeRespiration <= 0 || _jaugeData.JaugeNourriture <= 0)
         {
             GameManager._instance.EndGame();
         }

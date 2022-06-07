@@ -18,7 +18,7 @@ public class TrashSpawner : MonoBehaviour
 
     private void Update()
     {
-        _pollutionPercent = _jaugeSystem.JaugePollution / 10;
+        _pollutionPercent = _jaugeSystem._jaugeData.JaugePollution / 10;
     }
     
 }

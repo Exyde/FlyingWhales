@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_SpawnerManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5727901575186344752, guid: 4eb0d3670312d464a92f30b3a83bccbb, type: 3}
+      propertyPath: NbSpawnDepart
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4eb0d3670312d464a92f30b3a83bccbb, type: 3}
 --- !u!1 &705507993
@@ -412,6 +416,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 660008101798273831, guid: cd7888eb6ab811d4f8df31f221babb60, type: 3}
+      propertyPath: Apnee
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 660008101798273831, guid: cd7888eb6ab811d4f8df31f221babb60, type: 3}
       propertyPath: _imgEatingJauge
       value: 

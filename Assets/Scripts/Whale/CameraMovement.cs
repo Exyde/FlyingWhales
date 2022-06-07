@@ -25,7 +25,7 @@ public class CameraMovement : MonoBehaviour
         currentOffsetX = Vector3.Lerp(currentOffsetX, m_character.MoveValue.x * Vector3.right, m_offsetSpeedX * Time.fixedDeltaTime);
         currentOffsetY = Vector3.Lerp(currentOffsetY, m_character.MoveValue.y * Vector3.up, m_offsetSpeedY * Time.fixedDeltaTime);
 
-        currentOffsetZ = Vector3.Lerp(currentOffsetZ, (m_character.Boosting ? -1 : 0) * Vector3.forward, m_offsetSpeedZ * Time.fixedDeltaTime);
+        currentOffsetZ = Vector3.Lerp(currentOffsetZ, (m_character.Boosting ? -2.5f : 0) * Vector3.forward, m_offsetSpeedZ * Time.fixedDeltaTime);
 
         transform.localPosition = m_cameraOffset + currentOffsetX + currentOffsetY + currentOffsetZ;
     }

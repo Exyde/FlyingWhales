@@ -33,11 +33,24 @@ public class JaugeData : ScriptableObject
 
     //Jauge
 
+    [Header("Start Jauge Datas")]
+    public int _startJaugeNourriture;
+    public int _startJaugeRespiration;
+    public int _startJaugePollution;
+
+
     [Header("Jauge")]
-    public int JaugeNourriture = 800;
+    public int JaugeNourriture;
 
-    public int JaugeRespiration = 1000;
+    public int JaugeRespiration;
 
-    public int JaugePollution = 0;
+    public int JaugePollution;
     #endregion
+
+    public void SetupJauge()
+    {
+        JaugeNourriture = _startJaugeNourriture;
+        JaugeRespiration= _startJaugeRespiration;
+        JaugePollution = _startJaugePollution;
+    }
 }

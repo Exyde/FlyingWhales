@@ -53,6 +53,11 @@ public class JaugeSystem : MonoBehaviour
     [SerializeField] Image _imgEatingJauge;
 
 
+    private void Start()
+    {
+        _jaugeData.SetupJauge();
+    }
+
     void MangerPoisson()
     {
         //IMPACT JAUGE
@@ -116,7 +121,8 @@ public class JaugeSystem : MonoBehaviour
         // Debug.Log("Oxygene : " + oxygeneFill);
         // Debug.Log("Nourriture : " + eatingFill);
 
-
+        //Post Process
+        PostProcessingManager._instance.UpdateWaterColor();
 
         //GAME OVER
 

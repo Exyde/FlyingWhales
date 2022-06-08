@@ -21,8 +21,8 @@ MonoBehaviour:
   DechetImpactRespiration: 1
   DechetImpactPollution: 10
   _startJaugeNourriture: 1000
-  _startJaugeRespiration: 1000
+  _startJaugeRespiration: 0
   _startJaugePollution: 0
-  JaugeNourriture: 931
-  JaugeRespiration: 695
-  JaugePollution: 188
+  JaugeNourriture: 985
+  JaugeRespiration: -10
+  JaugePollution: 4
